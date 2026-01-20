@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>welcome to Diva</title>
+
+<style>
+.section,
+.header {
+    position: static !important;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    direction: rtl;
+    padding: 20px;
+
+    background: url("bg.png") center / cover no-repeat ;
+}
+
+
+
+ #start {
+    display: none;
+}
+
+#welcome {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,128,128,0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 9999;
+    text-align: center;
+	
+}
+
+#start:checked + #welcome {
+    display: none;
+}
+
+.start-btn {
+    background: white;
+    color: teal;
+    padding: 16px 45px;
+    border-radius: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 25px;
+}
+
+.logo {
+    width: 180px;
+    max-width: 70%;
+    height: auto;
+    margin-bottom: 25px;
+    display: block;
+}
+
+
+
+/* الأقسام */
+
+.section {
+    background: transparent;
+    text-align: center;
+    display: block;
+    margin-bottom: 40px;
+}
+
+
+/* البوكس الأزرق */
+.header {
+    display: block;
+    background: teal;
+    color: #fff;
+    padding: 30px;
+    font-weight: bold;
+    cursor: pointer;
+
+    width: 30%;
+    margin: 0 auto 10px auto;
+    border-radius: 40px;
+    text-align: center;
+}
+
+/* المحتوى */
+.content {
+    display: none;
+    padding: 70px;
+    margin-top: 15px;
+background:white;
+
+}
+
+.content img {
+    max-width: 50%;
+    margin-top: 60px;
+    border-radius: 6px;
+}
+
+.content video {
+    margin-top: 15px;
+    border-radius: 6px;
+    max-width: 50%;
+
+}
+
+.toggle {
+    display: none;
+}
+
+
+
+/* فتح المحتوى */
+.toggle:checked + .header + .content {
+    display: block;
+}
+
+
+.main-content {
+    padding-top: 30px;
+}
+
+
+footer {
+    color:  orange;
+    text-align: center;
+    padding: 15px 10px;
+    margin-top: 40px;
+    border-radius: 20px 20px 0 0;
+	
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+	margin: 0;
+    font-size: 14px;
+
+
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+	
+}
+
+.corner-text {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+
+    color: #ff6600;      /* لون مختلف */
+    font-size: 12px;
+    font-weight: bold;
+    opacity: 0.9;
+}
+
+
+
+</style>
+</head>
+
+<body>
+
+<!-- صفحة الترحيب -->
+<input type="checkbox" id="start">
+
+<div id="welcome">
+    <img src="logo.png" class="logo">
+    <h1>مرحبًا بك</h1>
+    <p>استكشفي الأقسام واختاري اللون المناسب </p>
+    <label for="start" class="start-btn">ابدأ</label>
+</div>
+
+<div class="main-content">
+
+
+<div class="section">
+
+    <input type="checkbox" id="sec1" class="toggle">
+
+    <label for="sec1" class="header">جريس</label>
+
+    <div class="content">
+        <p>اللون المقابل لها من لينس مي (ملاكيت)</p>
+        <img src="gris1.jpg">
+		<img src="gris2.jpg">
+        <img src="gris3.jpg">
+        <img src="gris4.jpg">
+        <img src="gris5.jpg">
+        <img src="gris6.jpg">
+
+       
+    </div>
+
+</div>
+
+<div class="section">
+    <input type="checkbox" id="sec2" class="toggle">
+    <label for="sec2" class="header">موون</label>
+    <div class="content">
+        <img src="moon1.jpg">
+        <img src="moon2.jpg">
+        <img src="moon3.jpg">
+        <img src="moon4.jpg">
+        <img src="moon5.jpg">
+        <img src="moon6.jpg">
+        <img src="moon7.jpg">
+
+		
+    </div>
+</div>
+
+<div class="section">
+    <input type="checkbox" id="sec3" class="toggle">
+    <label for="sec3" class="header">ميد نايت</label>
+    <div class="content">
+        <p>اللون المقابل لها من لينس مي (لايم)</p>
+        <img src="midnight1.jpg">  
+        <img src="midnight2.jpg">
+        <img src="midnight3.jpg">
+        <img src="midnight4.jpg">
+        <img src="midnight5.jpg">
+        <img src="midnight6.jpg">
+		<img src="midnight7.jpg">
+
+    </div>
+</div>
+
+<div class="section">
+    <input type="checkbox" id="sec4" class="toggle">
+    <label for="sec4" class="header">اوليفيان</label>
+    <div class="content">
+        <p>اللون المقابل لها من لينس مي (اوليفين)</p>
+        <img src="olivian1.jpg">
+        <img src="olivian2.jpg">
+        <img src="olivian3.jpg">
+        <img src="olivian4.jpg">
+        <img src="olivian5.jpg">
+        <img src="olivian6.jpg">
+    </div>
+</div>
+
+<div class="section">
+    <input type="checkbox" id="sec5" class="toggle">
+    <label for="sec5" class="header">ايفوري</label>
+    <div class="content">
+        <p>اللون المقابل لها من لينس مي (سموكي)</p>
+        <img src="ivory1.jpg">
+        <img src="ivory2.jpg">
+        <img src="ivory3.jpg">
+        <img src="ivory4.jpg">
+        <img src="ivory5.jpg">
+
+    </div>
+</div>
+
+<div class="section">
+    <input type="checkbox" id="sec7" class="toggle">
+    <label for="sec7" class="header">وودي</label>
+    <div class="content">
+        <img src="woody1.jpg">
+        <img src="woody2.jpg">
+        <img src="woody3.jpg">
+        <img src="woody4.jpg">
+        <img src="woody5.jpg">
+        <img src="woody6.jpg">
+    </div>
+</div>
+
+<div class="section">
+    <input type="checkbox" id="sec8" class="toggle">
+    <label for="sec8" class="header">كلاي
+	</label>
+    <div class="content">
+	        <p>اللون المقابل لها من لينس مي (قريبه من ماربل)</p>
+
+        <img src="clay1.jpg">
+        <img src="clay2.jpg">
+        <img src="clay3.jpg">
+        <img src="clay4.jpg">
+        <img src="clay5.jpg">
+        <img src="clay6.jpg">
+        <img src="clay7.jpg">
+
+    </div>
+</div>
+
+<div class="section">
+    <input type="checkbox" id="sec9" class="toggle">
+    <label for="sec9" class="header">ترافل</label>
+    <div class="content">
+        <p>اللون المقابل لها من لينس مي (كافيه)</p>
+        <img src="truffle1.jpg">
+        <img src="truffle2.jpg">
+        <img src="truffle3.jpg">
+        <img src="truffle4.jpg">
+        <img src="truffle5.jpg">
+    </div>
+</div>
+
+<div class="section">
+    <input type="checkbox" id="sec10" class="toggle">
+    <label for="sec10" class="header">لاتيه</label>
+    <div class="content">
+        <p>اللون المقابل لها من لينس مي (هوني)</p>
+        <img src="latte1.jpg">
+        <img src="latte2.jpg">
+        <img src="latte3.jpg">
+        <img src="latte4.jpg">
+        <img src="latte5.jpg">
+        <img src="latte6.jpg">
+
+    </div>
+</div>
+
+<div class="section">
+    <input type="checkbox" id="sec11" class="toggle">
+    <label for="sec11" class="header">اماندي</label>
+    <div class="content">
+        <p>اللون المقابل لها من لينس مي (تي)</p>
+        <img src="amandy1.jpg">
+        <img src="amandy2.jpg">
+        <img src="amandy3.jpg">
+        <img src="amandy4.jpg">
+        <img src="amandy5.jpg">
+        <img src="amandy6.jpg">
+        <img src="amandy7.jpg">
+<video controls muted autoplay loop>
+            <source src="Amandy8.mp4" type="video/mp4">
+        </video>    </div>
+</div>
+
+
+<div class="section">
+    <input type="checkbox" id="sec12" class="toggle">
+    <label for="sec12" class="header">توفي</label>
+    <div class="content">
+        <p>اللون المقابل لها من لينس مي (لاتيه)</p>
+        <img src="toffee1.jpg">
+        <img src="toffee2.jpg">
+        <img src="toffee3.jpg">
+        <img src="toffee4.jpg">
+        <img src="toffee5.jpg">
+        <img src="toffee6.jpg">
+    </div>
+</div>
+
+<div class="section">
+    <input type="checkbox" id="sec13" class="toggle">
+    <label for="sec13" class="header">نت</label>
+    <div class="content">
+        <img src="nut1.jpg">
+        <img src="nut2.jpg">
+        <img src="nut3.jpg">
+    </div>
+</div>
+
+<div class="section">
+    <input type="checkbox" id="sec14" class="toggle">
+    <label for="sec14" class="header">ساند</label>
+    <div class="content">
+        <img src="sand1.jpg">
+        <img src="sand2.jpg">
+        <img src="sand3.jpg">
+        <img src="sand4.jpg">
+        <img src="sand5.jpg">
+        <img src="sand6.jpg">
+        <img src="sand7.jpg">
+    </div>
+</div>
+
+<div class="section">
+    <input type="checkbox" id="sec15" class="toggle">
+    <label for="sec15" class="header">امبر</label>
+    <div class="content">
+        <p>اللون المقابل لها من لينس مي (ماربل)</p>
+        <img src="amber1.jpg">
+        <img src="amber2.jpg">
+        <img src="amber3.jpg">
+        <img src="amber4.jpg">
+        <img src="amber5.jpg">
+        <img src="amber6.jpg">
+        <img src="amber7.jpg">
+        <img src="amber8.jpg">
+    </div>
+</div>
+
+<div class="section">
+    <input type="checkbox" id="sec16" class="toggle">
+    <label for="sec16" class="header">لافا</label>
+    <div class="content">
+        <p>اللون المقابل لها من لينس مي (كاراميل)</p>
+        <img src="lava1.jpg">
+        <img src="lava2.jpg">
+        <img src="lava3.jpg">
+        <img src="lava4.jpg">
+        <img src="lava5.jpg">
+        <img src="lava6.jpg">
+
+    </div>
+</div>
+
+<div class="section">
+    <input type="checkbox" id="sec17" class="toggle">
+    <label for="sec17" class="header">نيفي</label>
+    <div class="content">
+        <p>اللون المقابل لها من لينس مي (سكاي بلو)</p>
+        <img src="navy1.jpg">
+        <img src="navy2.jpg">
+        <img src="navy3.jpg">
+        <img src="navy4.jpg">
+    </div>
+</div>
+
+<div class="section">
+    <input type="checkbox" id="sec18" class="toggle">
+    <label for="sec18" class="header">لامير</label>
+    <div class="content">
+	اللون المقابل لها من لينس مي (لابيل)
+        <img src="lamir1.jpg">
+        <img src="lamir2.jpg">
+        <img src="lamir3.jpg">
+        <img src="lamir4.jpg">
+        <img src="lamir5.jpg">
+		
+    </div>
+</div>
+
+<div class="section">
+    <input type="checkbox" id="sec19" class="toggle">
+    <label for="sec19" class="header">ستيل</label>
+    <div class="content">
+        <img src="steell.jpg">
+        <img src="steel2.jpg">
+        <img src="steel3.jpg">
+    </div>
+</div>
+
+<div class="section">
+    <input type="checkbox" id="sec20" class="toggle">
+    <label for="sec20" class="header">سيدار</label>
+    <div class="content">
+        <p>اللون المقابل لها من لينس مي (دراما) </p>
+        <img src="cedar7.jpg">
+		 <img src="cedar4.jpg">
+		 <img src="cedar8.jpg">
+		
+		<video controls muted autoplay loop>
+            <source src="cedar6.mp4" type="video/mp4">
+        </video>
+    </div>
+</div>
+
+<div class="section">
+    <input type="checkbox" id="sec21" class="toggle">
+    <label for="sec21" class="header">كريم</label>
+    <div class="content">
+        <img src="cream1.jpg">
+        <img src="cream2.jpg">
+        <img src="cream3.jpg">
+        <img src="cream4.jpg">
+    </div>
+</div>
+
+<div class="section">
+    <input type="checkbox" id="sec22" class="toggle">
+    <label for="sec22" class="header">ليلي</label>
+    <div class="content">
+        <img src="lili1.jpg">
+        <img src="lili2.jpg">
+        <img src="lili3.jpg">
+        <img src="lili4.jpg">
+        <img src="lili5.jpg">
+    </div>
+</div>
+
+<div class="section">
+    <input type="checkbox" id="sec23" class="toggle">
+    <label for="sec23" class="header">غالا</label>
+    <div class="content">
+        <p>اللون المقابل لها من لينس مي (اريبيا اي)</p>
+        <img src="gala1.jpg">
+        <img src="gala2.jpg">
+        <img src="gala3.jpg">
+        <img src="gala4.jpg">
+        <img src="gala5.jpg">
+    </div>
+</div>
+
+<div class="section">
+    <input type="checkbox" id="sec24" class="toggle">
+    <label for="sec24" class="header">ايتان</label>
+    <div class="content">
+        <img src="eitan1.jpg">
+        <img src="eitan2.jpg">
+        <img src="eitan3.jpg">
+        <img src="eitan4.jpg">
+        <img src="eitan5.jpg">
+        <img src="eitan6.jpg">
+    </div>
+</div>
+
+<div class="section">
+    <input type="checkbox" id="sec25" class="toggle">
+    <label for="sec25" class="header">بيتون</label>
+    <div class="content">
+        <p>اللون المقابل لها من لينس مي ( لاتيه وممكن دراما)</p>
+        <img src="beton1.jpg">
+        <img src="beton2.jpg">
+        <img src="beton3.jpg">
+        <img src="beton4.jpg">
+        <img src="beton5.jpg">
+    </div>
+</div>
+
+
+</div>  <!-- إغلاق main-content -->
+
+<div class="corner-text">
+    Created with care by Layan Almaslamani © 2026
+</div>
+
+
+</body>
+
+
+</html>
